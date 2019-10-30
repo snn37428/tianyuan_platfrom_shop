@@ -75,7 +75,7 @@ public class ApiPayController extends ApiBaseAction {
 
         try {
             Map<Object, Object> parame = new TreeMap<Object, Object>();
-            parame.put("appid", ResourceUtil.getConfigByName("wx.appId"));
+            parame.put("appid", ResourceUtil.getConfigByName("w6606x"));
             // 商家账号。
             parame.put("mch_id", ResourceUtil.getConfigByName("wx.mchId"));
             String randomStr = CharUtil.getRandomNum(18).toUpperCase();
@@ -130,7 +130,7 @@ public class ApiPayController extends ApiBaseAction {
                 } else if (result_code.equalsIgnoreCase("SUCCESS")) {
                     String prepay_id = MapUtils.getString("prepay_id", resultUn);
                     // 先生成paySign 参考https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=7_7&index=5
-                    resultObj.put("appId", ResourceUtil.getConfigByName("wx.appId"));
+                    resultObj.put("appId", ResourceUtil.getConfigByName("w6606x"));
                     resultObj.put("timeStamp", DateUtils.timeToStr(System.currentTimeMillis() / 1000, DateUtils.DATE_TIME_PATTERN));
                     resultObj.put("nonceStr", nonceStr);
                     resultObj.put("package", "prepay_id=" + prepay_id);
@@ -164,7 +164,7 @@ public class ApiPayController extends ApiBaseAction {
 
         OrderVo orderDetail = orderService.queryObject(orderId);
         Map<Object, Object> parame = new TreeMap<Object, Object>();
-        parame.put("appid", ResourceUtil.getConfigByName("wx.appId"));
+        parame.put("appid", ResourceUtil.getConfigByName("w6606x"));
         // 商家账号。
         parame.put("mch_id", ResourceUtil.getConfigByName("wx.mchId"));
         String randomStr = CharUtil.getRandomNum(18).toUpperCase();

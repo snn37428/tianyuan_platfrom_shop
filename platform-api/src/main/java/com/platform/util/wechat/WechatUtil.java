@@ -86,7 +86,7 @@ public class WechatUtil {
     private static Map<Object, Object> buildRequsetMapParam(String out_trade_no, BigDecimal bdOrderMoney, BigDecimal bdRefundMoney) {
         Map<Object, Object> params = new HashMap<Object, Object>();
         //微信分配的公众账号ID（企业号corpid即为此appId）
-        params.put("appid", ResourceUtil.getConfigByName("wx.appId"));
+        params.put("appid", ResourceUtil.getConfigByName("w6606x"));
         //微信支付分配的商户号
         params.put("mch_id", ResourceUtil.getConfigByName("wx.mchId"));
         //随机字符串，不长于32位。推荐随机数生成算法
@@ -153,7 +153,7 @@ public class WechatUtil {
     public Map<String, Object> wxRefundquery(String out_trade_no, String out_refund_no) {
         Map<Object, Object> params = new HashMap<Object, Object>();
         //微信分配的公众账号ID（企业号corpid即为此appId）
-        params.put("appid", ResourceUtil.getConfigByName("wx.appId"));
+        params.put("appid", ResourceUtil.getConfigByName("w6606x"));
         //微信支付分配的商户号
         params.put("mch_id", ResourceUtil.getConfigByName("wx.mchId"));
         //随机字符串，不长于32位。推荐随机数生成算法

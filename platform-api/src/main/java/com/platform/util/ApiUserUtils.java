@@ -18,8 +18,8 @@ public class ApiUserUtils {
     //替换字符串
     public static String getWebAccess(String CODE) {
         return String.format(ResourceUtil.getConfigByName("wx.webAccessTokenhttps"),
-                ResourceUtil.getConfigByName("wx.appId"),
-                ResourceUtil.getConfigByName("wx.secret"),
+                ResourceUtil.getConfigByName("w6606x"),
+                ResourceUtil.getConfigByName("w6609x"),
                 CODE);
     }
 

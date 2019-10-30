@@ -5,11 +5,13 @@
 		"es6": true,
 		"postcss": true,
 		"minified": true,
-		"newFeature": true
+		"newFeature": true,
+		"autoAudits": false,
+		"checkInvalidKey": true
 	},
 	"compileType": "miniprogram",
 	"libVersion": "1.9.0",
-	"appid": "wx7d1077edf1fd3ae5",
+	"appid": "wxd157147d4c79c241",
 	"projectname": "wxshop",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
