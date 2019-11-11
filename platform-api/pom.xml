@@ -17,6 +17,12 @@
             <version>1.0.0</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.thoughtworks.xstream</groupId>
+            <artifactId>xstream</artifactId>
+            <version>1.4.7</version>
+        </dependency>
+
         <!--swagger 依赖-->
         <dependency>
             <groupId>io.springfox</groupId>

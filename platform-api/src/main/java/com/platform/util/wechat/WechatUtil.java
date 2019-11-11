@@ -247,8 +247,8 @@ public class WechatUtil {
         }
         temp.append("&key=");
         temp.append(paySignKey);
-        System.out.println(temp.toString());
-        String packageSign = MD5.getMessageDigest(temp.toString());
+        System.out.println("temp=" + temp.toString());;
+        String packageSign = MD5.MD5Encode(temp.toString(), "utf-8");
         return packageSign;
     }
 
