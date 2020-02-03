@@ -3,6 +3,7 @@ package com.platform.controller;
 import com.google.code.kaptcha.Constants;
 import com.google.code.kaptcha.Producer;
 import com.platform.annotation.SysLog;
+import com.platform.service.SysUserService;
 import com.platform.utils.R;
 import com.platform.utils.ShiroUtils;
 import org.apache.shiro.authc.*;
@@ -32,6 +33,8 @@ import java.io.IOException;
 public class SysLoginController {
     @Autowired
     private Producer producer;
+    @Autowired
+    private SysUserService sysUserService;
 
     @RequestMapping("captcha.jpg")
     public void captcha(HttpServletResponse response) throws ServletException, IOException {
@@ -63,7 +66,9 @@ public class SysLoginController {
         if (!captcha.equalsIgnoreCase(kaptcha)) {
             return R.error("验证码不正确");
         }
-
+//        String newPassword ="tianyuan";
+//        newPassword = new Sha256Hash(newPassword).toHex();
+// int count = sysUserService.updatePassword(3L, "admin", newPassword);
         try {
             Subject subject = ShiroUtils.getSubject();
             //sha256加密
