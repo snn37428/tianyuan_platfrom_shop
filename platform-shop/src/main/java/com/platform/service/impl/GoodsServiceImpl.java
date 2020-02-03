@@ -69,6 +69,7 @@ public class GoodsServiceImpl implements GoodsService {
         }
         Integer id = goodsDao.queryMaxId() + 1;
         goods.setId(id);
+        goods.setGoodsSn(String.valueOf(id));
 
         //保存产品信息
         ProductEntity productEntity = new ProductEntity();
